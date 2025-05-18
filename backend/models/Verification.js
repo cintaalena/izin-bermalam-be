@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
 
 const VerificationSchema = new mongoose.Schema({
   npm: { type: String, required: true },
@@ -9,13 +9,13 @@ const VerificationSchema = new mongoose.Schema({
   kecamatan: { type: String, required: true },
   kelurahan: { type: String, required: true },
   kota: { type: String, required: true },
-  kecamatanSwafoto: { type: String, default: "Loading..." },
-  kelurahanSwafoto: { type: String, default: "Loading..." },
-  kotaSwafoto: { type: String, default: "Loading..." },
-  status: { type: String, default: "Mengajukan Kembali" },
-  keterangan: { type: String, default: "" }, // Menambahkan field keterangan
+  kecamatanSwafoto: { type: String, default: 'Loading...' },
+  kelurahanSwafoto: { type: String, default: 'Loading...' },
+  kotaSwafoto: { type: String, default: 'Loading...' },
+  status: { type: String, default: 'Mengajukan Kembali' },
+  keterangan: { type: String, default: '' }, // Menambahkan field keterangan
   createdAt: { type: Date, default: Date.now } // Menambahkan field createdAt
-});
+})
 
-const Verification = mongoose.model("Verification", VerificationSchema);
-export default Verification;
+const Verification = mongoose.model('Verification', VerificationSchema)
+export default Verification
